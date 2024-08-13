@@ -156,16 +156,10 @@ photoplate(
 #> [1] "Saved .tex file to: auxiliaries/example_output.tex"
 ```
 
-All done! Let’s see how the LaTeX file looks:
+All done! Let’s look at the LaTeX file (created with
+[this](auxiliaries/latex_file.tex) code then converted into a JPEG):
 
-<div class="figure" style="text-align: center">
-
-<img src="auxiliaries/latex_file.jpg" alt="LaTeX PDF" width="75%" />
-<p class="caption">
-LaTeX PDF
-</p>
-
-</div>
+<img src="auxiliaries/latex_file.jpg" width="75%" style="display: block; margin: auto;" />
 
 ## Notes about the function’s parameters
 
