@@ -168,6 +168,11 @@ LaTeX PDF.
 
 </div>
 
+<figure>
+<embed src="auxiliaries/latex_file.pdf" title="some discription" />
+<figcaption aria-hidden="true">some discription</figcaption>
+</figure>
+
 ## Notes about the function’s parameters
 
 - *this_stargazer*: Call of stargazer::stargazer() on regression model

@@ -114,7 +114,7 @@ All done! Let's load the LaTeX file here in Markdown to see how it looks:
 ```{r latex pdf, fig.align="center", fig.cap=c("LaTeX PDF."), echo=FALSE}
 knitr::include_graphics("auxiliaries/latex_file.pdf")
 ```
-
+![some discription](auxiliaries/latex_file.pdf "some discription")
 
 ## Notes about the function's parameters
 
