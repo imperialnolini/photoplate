@@ -156,10 +156,10 @@ photoplate(
 #> [1] "Saved .tex file to: auxiliaries/example_output.tex"
 ```
 
-All done! Let’s look at the LaTeX file (created with
-[this](auxiliaries/latex_file.tex) code then converted into a JPEG to
-display here, though the PDF itself is
-[here](auxiliaries/latex_file.pdf)):
+All done! Let’s look at the LaTeX rendering of the photoplate() LaTeX
+table made (see [here](auxiliaries/latex_file.tex) for the .tex file
+used to create the document and [here](auxiliaries/latex_file.pdf) for
+the original PDF):
 
 <img src="auxiliaries/latex_file_image.jpg" width="75%" style="display: block; margin: auto;" />
 
