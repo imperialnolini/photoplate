@@ -138,8 +138,8 @@ stargazer::stargazer(model,
 #>                               Just make sure each note like this ends in a period.
 ```
 
-Prior to using photoplate(), it’s a good idea to check that form of
-textual output - especially if you use the various
+Prior to using photoplate::photoplate(), it’s a good idea to check that
+form of textual output - especially if you use the various
 stargazer::stargazer() parameters to format the output (e.g., renaming
 things and/or adding notes, as done here).
 

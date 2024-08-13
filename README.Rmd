@@ -97,7 +97,7 @@ stargazer::stargazer(model,
                      type = "text")
 ```
 
-Prior to using photoplate(), it's a good idea to check that form of textual output - especially if you use the various stargazer::stargazer() parameters to format the output (e.g., renaming things and/or adding notes, as done here).
+Prior to using photoplate::photoplate(), it's a good idea to check that form of textual output - especially if you use the various stargazer::stargazer() parameters to format the output (e.g., renaming things and/or adding notes, as done here).
 
 Having looked at that textual output and verified the stargazer::stargazer() call seems fine, it's time to run photoplate() for real. This time, however, we won't pass in arguments for the "type" or "out" keyword parameters.
 
