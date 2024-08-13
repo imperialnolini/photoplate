@@ -22,11 +22,9 @@ The goal of photoplate is to customize stargazer::stargazer() regression tables 
 
 Until the later 1980s, astronomers used glass photographic plates to record their observations. These plates made it possible for them to share what they saw when gazing toward the stars; in that spirit, this package's eponymous function is named "photoplate."
 
-```{r photographic plate, echo=FALSE, fig.cap="A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen", out.width = '100%'}
+```{r photographic plate, echo=FALSE, fig.cap="A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen, ([source and further reading](https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/)).", out.width = '75%'}
 knitr::include_graphics("photographic_plate.jpeg")
 ```
-
-[source and further reading]((https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/)
 
 
 The below example illustrates the functionality of the package.
