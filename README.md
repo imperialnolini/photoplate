@@ -159,7 +159,7 @@ photoplate(
 All done! Let’s look at the LaTeX file (created with
 [this](auxiliaries/latex_file.tex) code then converted into a JPEG):
 
-<img src="auxiliaries/latex_file.jpg" width="75%" style="display: block; margin: auto;" />
+<img src="auxiliaries/latex_file_image.jpg" width="75%" style="display: block; margin: auto;" />
 
 ## Notes about the function’s parameters
 
