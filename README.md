@@ -30,8 +30,8 @@ plates](https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies
 
 ## Installation
 
-You can install the development version of photoplate from
-[GitHub](https://github.com/) with:
+You can install the development version of photoplate from GitHub by
+running the following:
 
 ``` r
 # install.packages("pak")
@@ -44,28 +44,35 @@ This is a basic example of how to use the package:
 
 ``` r
 library(photoplate)
+```
 
-# Let's estimate a linear model and reformat its stargazer LaTeX output.
+Let’s estimate a linear model and reformat its stargazer LaTeX output.
 
-# We'll estimate a model for y = b0 + b1*x1 + b2*x2 + e, where:
-#  - b0 = 10
-#  - b1 = -20
-#  - b2 = 30
-#  - e = error following a uniform distribution from 0.0001 to 1
- 
-# We begin by generating 10000 datapoints (let's sample with replacement
-# from 0 to 10000000 for x1 and x2 and from 0 to 1 without replacement for e
-# then calculate values of y per the betas defined above):
+We’ll estimate a model for y = b0 + b1*x1 + b2*x2 + e, where: \* b0 = 10
+\* b1 = -20 \* b2 = 30 \* e = error following a uniform distribution
+from 0.0001 to 1
+
+We begin by generating 10000 datapoints (let’s sample with replacement
+from 0 to 10000000 for x1 and x2 and from 0 to 1 without replacement for
+e then calculate values of y per the betas defined above):
+
+``` r
 base::set.seed(1)
 x1 = sample(0:10000000, 10000, TRUE)
 x2 = sample(0:10000000, 10000, TRUE)
 e = sample(1:10000, 10000, FALSE, rep(1/10000, 10000))/10000
 y = 10 + (-20*x1) + (30*x2) + e
- 
-# We continue by estimating a model:
+```
+
+We continue by estimating a model:
+
+``` r
 model <- lm(y ~ x1 + x2)
- 
-# We can feed the model to stargazer::stargazer() to look at its results:
+```
+
+We can feed the model to stargazer::stargazer() to look at its results:
+
+``` r
 stargazer::stargazer(model, type = "text")
 #> 
 #> =====================================================================
@@ -90,42 +97,53 @@ stargazer::stargazer(model, type = "text")
 #> F Statistic         646,745,117,735,764,099,082.000*** (df = 2; 9997)
 #> =====================================================================
 #> Note:                                     *p<0.1; **p<0.05; ***p<0.01
+```
 
-# Note you should always check that form of textual output - especially
-# if you use the various stargazer::stargazer() parameters to format the
-# output (e.g., renaming the variables) - prior to using photoplate().
+Note you should always check that form of textual output - especially if
+you use the various stargazer::stargazer() parameters to format the
+output (e.g., renaming the variables) - prior to using photoplate().
 
-# For this example, we'll save the .tex file in your temporary directory.
-# Let's get that save filepath:
+For this example, we’ll save the .tex file in my computer’s temporary
+directory with a name similar to “photoplate_example” and “.tex” as the
+file’s extension. When using the package for real, it’s worth being much
+more intentional about where to save regression output tables; this is
+for the sake of illustration. Let’s generate that save filepath:
+
+``` r
 save_path = tempfile(pattern = "photoplate_example",
-                    fileext = ".tex",
-                    tmpdir = tempdir(check = TRUE))
-# This code says we want a filename that's close to "photoplate_example" and
-# has ".tex" as its extension, and we want it to go in your computer's
-# temporary directory.
+                     fileext = ".tex",
+                     tmpdir = tempdir(check = TRUE))
+```
 
-# Having verified that model output seems fine, we feed it to photoplate()
-# with arguments for the additional parameters:
+Returning to the model output, having verified it seems fine by looking
+at the textual output earlier, it’s time to run photoplate() for real.
+
+**Note any call to the function makes a .tex file (1) with the
+stargazer::stargazer() LaTeX-formatted output from the first arguemnt
+(2) and with the position parameter as whatever you pass in as the
+second argument (3) in a file saved at the filepath given as the third
+argument (4) with the LaTeX-internal label of what you enter for the
+fourth argument (for cross-referencing purposes). The function call will
+also return the save filepath.**
+
+Let’s run it:
+
+``` r
 photoplate(
-  stargazer::stargazer(model),
-  "!h",
-  save_path,
-  "model_output_label_for_crossref"
+  this_stargazer = stargazer::stargazer(model),
+  position = "!h",
+  filepath = save_path,
+  label = "model_output_label_for_crossref"
   )
-#> [1] "Saved .tex file to: C:\\Users\\imper\\AppData\\Local\\Temp\\Rtmpys9OMG\\photoplate_example13c88274535c7.tex"
+#> [1] "Saved .tex file to: C:\\Users\\imper\\AppData\\Local\\Temp\\RtmpmWKI73\\photoplate_example84bc394c1525.tex"
+```
 
-# That code will make a .tex file with the stargazer::stargazer() output
-# of the model we estimated and with "!h" as the table format argument.
-# That file will save in your temporary directory with a filename like
-# "photoplate_example.tex" and with "model_output_label_for_crossref"
-# as its LaTeX-internal label for cross-referencing. When you run the
-# function for real, you should specify the directory where you want the
-# file to save and include the specific name you would like for the file.
+All done! The file is there, and it compiles correctly in LaTeX. To
+conclude, I’ll go ahead and remove that example file from my temporary
+directory, though normally I of course would keep the generated files
+for use when writing:
 
-# Running the function like this will return something like the following:
-# "Saved .tex file to: **temporary directory**\photoplate_example.tex"
-
-# To conclude, we remove that example file from your temporary directory:
+``` r
 file.remove(save_path)
 #> [1] TRUE
 ```
