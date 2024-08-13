@@ -5,3 +5,9 @@
 .DS_Store
 .quarto
 building_package.R
+latex_file.aux
+latex_file.bbl
+latex_file.bcf
+latex_file.blg
+latex_file.log
+latex_file.run.xml
