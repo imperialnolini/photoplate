@@ -18,17 +18,14 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of photoplate is to customize stargazer::stargazer() regression tables for inclusion in LaTeX documents.
+The goal of photoplate is to customize stargazer::stargazer() regression tables for inclusion in LaTeX documents. The example below illustrates the functionality of the package.
 
 Until the later 1980s, astronomers used glass photographic plates to record their observations. These plates made it possible for them to share what they saw when gazing toward the stars; in that spirit, this package's eponymous function is named "photoplate."
 
-```{r photographic plate, echo=FALSE, fig.cap="A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen.", out.width = '75%'}
+```{r photographic plate, echo=FALSE, fig.cap="A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen.", out.width = '75%', fig.align = 'center'}
 knitr::include_graphics("photographic_plate.jpeg")
 ```
-[source and further reading](https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/)
-
-
-The below example illustrates the functionality of the package.
+[Image source and more on photographic plates](https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/)
 
 
 ## Installation
