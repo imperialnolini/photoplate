@@ -1,4 +1,4 @@
-#' Customize stargazer::stargazer() regression table for inclusion in a LaTeX document.
+#' Customize stargazer::stargazer() regression tables for inclusion in LaTeX documents.
 #'
 #' @param this_stargazer Call of stargazer::stargazer() on regression model output(s).
 #' @param position String. Position parameter for the table in LaTeX - e.g., "h", "t", "b", "p", "!", "H". Note "!h" is similar (though not necessarily identical to) "H" and using "H" is possible only if you first load the "float" package in your LaTeX document's preamble.
@@ -55,7 +55,8 @@
 #' ## has ".tex" as its extension, and we want it to go in your computer's
 #' ## temporary directory.
 #'
-#' ## Having verified that model output seems fine, we feed it to photoplate():
+#' ## Having verified that model output seems fine, we feed it to photoplate()
+#' ## with arguments for the additional parameters:
 #' photoplate(
 #'    stargazer::stargazer(model),
 #'    "!h",

@@ -2,7 +2,7 @@
 % Please edit documentation in R/photoplate.R
 \name{photoplate}
 \alias{photoplate}
-\title{Customize stargazer::stargazer() regression table for inclusion in a LaTeX document.}
+\title{Customize stargazer::stargazer() regression tables for inclusion in LaTeX documents.}
 \usage{
 photoplate(this_stargazer, position, filepath, label)
 }
@@ -19,7 +19,7 @@ photoplate(this_stargazer, position, filepath, label)
 Returns a string message with the filepath to the .tex file with your LaTeX-customized regression model output.
 }
 \description{
-Customize stargazer::stargazer() regression table for inclusion in a LaTeX document.
+Customize stargazer::stargazer() regression tables for inclusion in LaTeX documents.
 }
 \details{
 Until the later 1980s, astronomers used glass photographic plates to record their observations. These plates made it possible for them to share what they saw when gazing toward the stars; in that spirit, this package's eponymous function is named "photoplate."
@@ -67,7 +67,8 @@ save_path = tempfile(pattern = "photoplate_example",
 ## has ".tex" as its extension, and we want it to go in your computer's
 ## temporary directory.
 
-## Having verified that model output seems fine, we feed it to photoplate():
+## Having verified that model output seems fine, we feed it to photoplate()
+## with arguments for the additional parameters:
 photoplate(
    stargazer::stargazer(model),
    "!h",
