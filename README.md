@@ -1,4 +1,6 @@
 
+
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # photoplate
@@ -176,6 +178,8 @@ your caption
 </p>
 
 </div>
+
+more text
 
 ## Notes about the function’s parameters
 

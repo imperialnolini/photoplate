@@ -1,5 +1,7 @@
 ---
 output: github_document
+header-includes:
+  - \usepackage{pdfpages}
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -118,6 +120,12 @@ text
 ```{r, out.width="0.3\\linewidth", include=TRUE, fig.align="center", fig.cap=c("your caption"), echo=FALSE}
 knitr::include_graphics("auxiliaries/latex_file.pdf")
 ```
+
+more text
+
+\includepdf[]{auxiliaries/latex_file.pdf}
+
+
 
 ## Notes about the function's parameters
 
