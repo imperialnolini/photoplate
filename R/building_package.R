@@ -1,10 +1,10 @@
 library(devtools)
 
-use_git()
+devtools::use_git()
 
-use_r("photoplate")
+devtools::use_r("photoplate")
 
-load_all()
+devtools::load_all()
 
 
 
