@@ -42,7 +42,8 @@ pak::pak("imperialnolini/photoplate")
 
 ## Example
 
-This is a basic example of how to use the package:
+What follows is a walkthrough of how to use the package. We begin by
+loading it:
 
 ``` r
 library(photoplate)
