@@ -161,25 +161,12 @@ looks:
 
 <div class="figure" style="text-align: center">
 
-<embed src="auxiliaries/latex_file.pdf" title="LaTeX PDF." width="75%" type="application/pdf" />
+<embed src="auxiliaries/latex_file.pdf" title="LaTeX PDF." width="100%" type="application/pdf" />
 <p class="caption">
 LaTeX PDF.
 </p>
 
 </div>
-
-text
-
-<div class="figure" style="text-align: center">
-
-<embed src="auxiliaries/latex_file.pdf" title="your caption" width="0.3\linewidth" type="application/pdf" />
-<p class="caption">
-your caption
-</p>
-
-</div>
-
-more text
 
 ## Notes about the function’s parameters
 

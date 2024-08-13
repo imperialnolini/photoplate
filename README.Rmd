@@ -111,20 +111,9 @@ photoplate(
 
 All done! Let's load the LaTeX file here in Markdown to see how it looks:
 
-```{r latex pdf, echo=FALSE, fig.cap="LaTeX PDF.", out.width = '75%', fig.align = 'center'}
+```{r latex pdf, fig.align="center", fig.cap=c("LaTeX PDF."), echo=FALSE}
 knitr::include_graphics("auxiliaries/latex_file.pdf")
 ```
-
-text
-
-```{r, out.width="0.3\\linewidth", include=TRUE, fig.align="center", fig.cap=c("your caption"), echo=FALSE}
-knitr::include_graphics("auxiliaries/latex_file.pdf")
-```
-
-more text
-
-\includepdf[]{auxiliaries/latex_file.pdf}
-
 
 
 ## Notes about the function's parameters
