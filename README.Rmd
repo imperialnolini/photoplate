@@ -109,12 +109,13 @@ photoplate(
   )
 ```
 
-All done! Let's load the LaTeX file here in Markdown to see how it looks:
+All done! Let's see how the LaTeX file looks:
 
-```{r latex pdf, fig.align="center", fig.cap=c("LaTeX PDF."), echo=FALSE}
-knitr::include_graphics("auxiliaries/latex_file.pdf")
+```{r latex pdf, echo=FALSE, fig.cap="LaTeX PDF", out.width = '75%', fig.align = 'center'}
+knitr::include_graphics("auxiliaries/latex_file.jpg")
 ```
-![some discription](auxiliaries/latex_file.pdf "some discription")
+
+
 
 ## Notes about the function's parameters
 

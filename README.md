@@ -156,22 +156,16 @@ photoplate(
 #> [1] "Saved .tex file to: auxiliaries/example_output.tex"
 ```
 
-All done! Let’s load the LaTeX file here in Markdown to see how it
-looks:
+All done! Let’s see how the LaTeX file looks:
 
 <div class="figure" style="text-align: center">
 
-<embed src="auxiliaries/latex_file.pdf" title="LaTeX PDF." width="100%" type="application/pdf" />
+<img src="auxiliaries/latex_file.jpg" alt="LaTeX PDF" width="75%" />
 <p class="caption">
-LaTeX PDF.
+LaTeX PDF
 </p>
 
 </div>
-
-<figure>
-<embed src="auxiliaries/latex_file.pdf" title="some discription" />
-<figcaption aria-hidden="true">some discription</figcaption>
-</figure>
 
 ## Notes about the function’s parameters
 
