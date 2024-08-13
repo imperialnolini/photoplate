@@ -16,15 +16,16 @@ package’s eponymous function is named “photoplate.”
 
 <div class="figure">
 
-<img src="photographic_plate.jpeg" alt="A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen, ([source and further reading](https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/))." width="75%" />
+<img src="photographic_plate.jpeg" alt="A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen." width="75%" />
 <p class="caption">
 A collection of glass plates from 1909 to 1922 capture the moon in
-different phases. Niels Bohr Institute, University of Copenhagen,
-([source and further
-reading](https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/)).
+different phases. Niels Bohr Institute, University of Copenhagen.
 </p>
 
 </div>
+
+[source and further
+reading](https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/)
 
 The below example illustrates the functionality of the package.
 
@@ -54,7 +55,7 @@ pak::pak("imperialnolini/photoplate")
 #> + hms                     1.1.3      [dl] (103.58 kB)
 #> + lifecycle               1.0.4      [dl] (139.75 kB)
 #> + magrittr                2.0.3      [dl] (227.09 kB)
-#> + photoplate 0.0.0.9000 → 0.0.0.9000 [bld][cmp][dl] (GitHub: 91a8655)
+#> + photoplate 0.0.0.9000 → 0.0.0.9000 [bld][cmp][dl] (GitHub: 7b5454e)
 #> + pillar                  1.9.0      [dl] (659.10 kB)
 #> + pkgconfig               2.0.3      [dl] (22.20 kB)
 #> + R6                      2.5.1      [dl] (84.31 kB)
@@ -96,7 +97,7 @@ pak::pak("imperialnolini/photoplate")
 #> ✔ Cached copy of vctrs 0.6.5 (x86_64-w64-mingw32) is the latest build
 #> ✔ Cached copy of vroom 1.6.5 (x86_64-w64-mingw32) is the latest build
 #> ✔ Cached copy of withr 3.0.0 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Got photoplate 0.0.0.9000 (source) (91.95 kB)
+#> ✔ Got photoplate 0.0.0.9000 (source) (92.00 kB)
 #> ✔ Installed R6 2.5.1  (1.1s)
 #> ✔ Installed bit64 4.0.5  (1.1s)
 #> ✔ Installed bit 4.0.5  (1.1s)
@@ -107,29 +108,29 @@ pak::pak("imperialnolini/photoplate")
 #> ✔ Installed fansi 1.0.6  (1.1s)
 #> ✔ Installed generics 0.1.3  (1.1s)
 #> ✔ Installed glue 1.7.0  (1.1s)
-#> ✔ Installed hms 1.1.3  (1.1s)
-#> ✔ Installed lifecycle 1.0.4  (1.1s)
-#> ✔ Installed magrittr 2.0.3  (1.1s)
-#> ✔ Installed pillar 1.9.0  (1.1s)
+#> ✔ Installed hms 1.1.3  (1.2s)
+#> ✔ Installed lifecycle 1.0.4  (1.2s)
+#> ✔ Installed magrittr 2.0.3  (1.2s)
+#> ✔ Installed pillar 1.9.0  (1.2s)
 #> ✔ Installed pkgconfig 2.0.3  (1.2s)
 #> ✔ Installed readr 2.1.5  (1.2s)
 #> ✔ Installed rlang 1.1.3  (1.2s)
 #> ✔ Installed stargazer 5.2.3  (1.2s)
 #> ✔ Installed stringr 1.5.1  (1.2s)
-#> ✔ Installed stringi 1.8.3  (1.4s)
-#> ✔ Installed tibble 3.2.1  (398ms)
-#> ✔ Installed tidyselect 1.2.1  (417ms)
-#> ✔ Installed tzdb 0.4.0  (440ms)
-#> ✔ Installed utf8 1.2.4  (389ms)
-#> ✔ Installed vctrs 0.6.5  (388ms)
-#> ✔ Installed withr 3.0.0  (291ms)
-#> ✔ Installed vroom 1.6.5  (406ms)
+#> ✔ Installed stringi 1.8.3  (1.5s)
+#> ✔ Installed tibble 3.2.1  (432ms)
+#> ✔ Installed tidyselect 1.2.1  (426ms)
+#> ✔ Installed tzdb 0.4.0  (424ms)
+#> ✔ Installed utf8 1.2.4  (394ms)
+#> ✔ Installed vctrs 0.6.5  (393ms)
+#> ✔ Installed withr 3.0.0  (306ms)
+#> ✔ Installed vroom 1.6.5  (415ms)
 #> ℹ Packaging photoplate 0.0.0.9000
-#> ✔ Packaged photoplate 0.0.0.9000 (1.4s)
+#> ✔ Packaged photoplate 0.0.0.9000 (1.5s)
 #> ℹ Building photoplate 0.0.0.9000
-#> ✔ Built photoplate 0.0.0.9000 (2.1s)
-#> ✔ Installed photoplate 0.0.0.9000 (github::imperialnolini/photoplate@91a8655) (294ms)
-#> ✔ 1 pkg + 27 deps: upd 1, added 27, dld 1 (NA B) [14.7s]
+#> ✔ Built photoplate 0.0.0.9000 (2s)
+#> ✔ Installed photoplate 0.0.0.9000 (github::imperialnolini/photoplate@7b5454e) (264ms)
+#> ✔ 1 pkg + 27 deps: upd 1, added 27, dld 1 (NA B) [14.3s]
 ```
 
 ## Example
@@ -206,7 +207,7 @@ photoplate(
   save_path,
   "model_output_label_for_crossref"
   )
-#> [1] "Saved .tex file to: C:\\Users\\imper\\AppData\\Local\\Temp\\RtmpMFoWVq\\photoplate_examplecad045122a1a.tex"
+#> [1] "Saved .tex file to: C:\\Users\\imper\\AppData\\Local\\Temp\\RtmpCacYnG\\photoplate_example179e45da3477.tex"
 
 # That code will make a .tex file with the stargazer::stargazer() output
 # of the model we estimated and with "!h" as the table format argument.
