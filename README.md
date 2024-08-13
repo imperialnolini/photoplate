@@ -14,6 +14,16 @@ record their observations. These plates made it possible for them to
 share what they saw when gazing toward the stars; in that spirit, this
 package’s eponymous function is named “photoplate.”
 
+<figure>
+<img src="%22photographic_plate.webp%22"
+alt="“A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen,” source and further reading" />
+<figcaption aria-hidden="true">“A collection of glass plates from 1909
+to 1922 capture the moon in different phases. Niels Bohr Institute,
+University of Copenhagen,” <a
+href="https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/">source
+and further reading</a></figcaption>
+</figure>
+
 The below example illustrates the functionality of the package.
 
 ## Installation
@@ -24,13 +34,11 @@ You can install the development version of photoplate from
 ``` r
 # install.packages("pak")
 pak::pak("imperialnolini/photoplate")
-#> ! Using bundled GitHub PAT. Please add your own PAT using `gitcreds::gitcreds_set()`.
-#> ✔ Updated metadata database: 5.30 MB in 15 files.
-#> ℹ Updating metadata database✔ Updating metadata database ... done
+#> ℹ Loading metadata database✔ Loading metadata database ... done
 #>  
 #> → Will install 27 packages.
 #> → Will update 1 package.
-#> → Will download 27 CRAN packages (30.19 MB).
+#> → Will download 25 CRAN packages (14.57 MB), cached: 2 (15.62 MB).
 #> → Will download 1 package with unknown size.
 #> + bit                     4.0.5      [dl] (1.13 MB)
 #> + bit64                   4.0.5      [dl] (492.93 kB)
@@ -44,14 +52,14 @@ pak::pak("imperialnolini/photoplate")
 #> + hms                     1.1.3      [dl] (103.58 kB)
 #> + lifecycle               1.0.4      [dl] (139.75 kB)
 #> + magrittr                2.0.3      [dl] (227.09 kB)
-#> + photoplate 0.0.0.9000 → 0.0.0.9000 [bld][cmp][dl] (GitHub: 96c572a)
+#> + photoplate 0.0.0.9000 → 0.0.0.9000 [bld][cmp][dl] (GitHub: 3cd2ae1)
 #> + pillar                  1.9.0      [dl] (659.10 kB)
 #> + pkgconfig               2.0.3      [dl] (22.20 kB)
 #> + R6                      2.5.1      [dl] (84.31 kB)
 #> + readr                   2.1.5      [dl] (1.16 MB)
 #> + rlang                   1.1.3      [dl] (1.58 MB)
-#> + stargazer               5.2.3      [dl] (617.47 kB)
-#> + stringi                 1.8.3      [dl] (15.01 MB)
+#> + stargazer               5.2.3      
+#> + stringi                 1.8.3      
 #> + stringr                 1.5.1      [dl] (318.73 kB)
 #> + tibble                  3.2.1      [dl] (690.23 kB)
 #> + tidyselect              1.2.1      [dl] (225.39 kB)
@@ -60,68 +68,62 @@ pak::pak("imperialnolini/photoplate")
 #> + vctrs                   0.6.5      [dl] (1.34 MB)
 #> + vroom                   1.6.5      [dl] (1.31 MB)
 #> + withr                   3.0.0      [dl] (245.68 kB)
-#> ℹ Getting 27 pkgs (30.19 MB) and 1 pkg with unknown size
-#> ✔ Got clipr 0.8.0 (i386+x86_64-w64-mingw32) (54.73 kB)
-#> ✔ Got R6 2.5.1 (i386+x86_64-w64-mingw32) (84.20 kB)
-#> ✔ Got photoplate 0.0.0.9000 (source) (11.34 kB)
-#> ✔ Got crayon 1.5.2 (i386+x86_64-w64-mingw32) (162.60 kB)
-#> ✔ Got bit64 4.0.5 (x86_64-w64-mingw32) (494.37 kB)
-#> ✔ Got generics 0.1.3 (i386+x86_64-w64-mingw32) (79.65 kB)
-#> ✔ Got fansi 1.0.6 (x86_64-w64-mingw32) (313.55 kB)
-#> ✔ Got bit 4.0.5 (x86_64-w64-mingw32) (1.13 MB)
-#> ✔ Got pillar 1.9.0 (i386+x86_64-w64-mingw32) (658.89 kB)
-#> ✔ Got rlang 1.1.3 (x86_64-w64-mingw32) (1.58 MB)
-#> ✔ Got stargazer 5.2.3 (i386+x86_64-w64-mingw32) (617.47 kB)
-#> ✔ Got tidyselect 1.2.1 (i386+x86_64-w64-mingw32) (225.40 kB)
-#> ✔ Got withr 3.0.0 (i386+x86_64-w64-mingw32) (246.01 kB)
-#> ✔ Got cli 3.6.2 (x86_64-w64-mingw32) (1.34 MB)
-#> ✔ Got stringr 1.5.1 (i386+x86_64-w64-mingw32) (318.81 kB)
-#> ✔ Got pkgconfig 2.0.3 (i386+x86_64-w64-mingw32) (22.42 kB)
-#> ✔ Got dplyr 1.1.4 (x86_64-w64-mingw32) (1.56 MB)
-#> ✔ Got tibble 3.2.1 (x86_64-w64-mingw32) (690.09 kB)
-#> ✔ Got utf8 1.2.4 (x86_64-w64-mingw32) (149.95 kB)
-#> ✔ Got readr 2.1.5 (x86_64-w64-mingw32) (1.16 MB)
-#> ✔ Got glue 1.7.0 (x86_64-w64-mingw32) (160.73 kB)
-#> ✔ Got vroom 1.6.5 (x86_64-w64-mingw32) (1.31 MB)
-#> ✔ Got tzdb 0.4.0 (x86_64-w64-mingw32) (1.02 MB)
-#> ✔ Got vctrs 0.6.5 (x86_64-w64-mingw32) (1.34 MB)
-#> ✔ Got hms 1.1.3 (i386+x86_64-w64-mingw32) (103.41 kB)
-#> ✔ Got lifecycle 1.0.4 (i386+x86_64-w64-mingw32) (139.79 kB)
-#> ✔ Got magrittr 2.0.3 (x86_64-w64-mingw32) (227.22 kB)
-#> ✔ Got stringi 1.8.3 (x86_64-w64-mingw32) (15.01 MB)
-#> ✔ Installed R6 2.5.1  (1.4s)
-#> ✔ Installed bit64 4.0.5  (1.5s)
-#> ✔ Installed bit 4.0.5  (1.7s)
-#> ✔ Installed cli 3.6.2  (1.7s)
-#> ✔ Installed clipr 0.8.0  (1.9s)
-#> ✔ Installed crayon 1.5.2  (2.1s)
-#> ✔ Installed dplyr 1.1.4  (2.1s)
-#> ✔ Installed fansi 1.0.6  (2.2s)
-#> ✔ Installed generics 0.1.3  (2.4s)
-#> ✔ Installed glue 1.7.0  (2.4s)
-#> ✔ Installed hms 1.1.3  (2.6s)
-#> ✔ Installed lifecycle 1.0.4  (2.7s)
-#> ✔ Installed magrittr 2.0.3  (2.9s)
-#> ✔ Installed pillar 1.9.0  (2.8s)
-#> ✔ Installed pkgconfig 2.0.3  (3s)
-#> ✔ Installed readr 2.1.5  (3.1s)
-#> ✔ Installed rlang 1.1.3  (3.1s)
-#> ✔ Installed stargazer 5.2.3  (3.2s)
-#> ✔ Installed stringr 1.5.1  (3.2s)
-#> ✔ Installed stringi 1.8.3  (3.6s)
-#> ✔ Installed tibble 3.2.1  (599ms)
-#> ✔ Installed tidyselect 1.2.1  (627ms)
-#> ✔ Installed tzdb 0.4.0  (748ms)
-#> ✔ Installed utf8 1.2.4  (652ms)
-#> ✔ Installed vctrs 0.6.5  (703ms)
-#> ✔ Installed withr 3.0.0  (610ms)
-#> ✔ Installed vroom 1.6.5  (881ms)
-#> ℹ Packaging photoplate 0.0.0.9000
-#> ✔ Packaged photoplate 0.0.0.9000 (1.6s)
-#> ℹ Building photoplate 0.0.0.9000
-#> ✔ Built photoplate 0.0.0.9000 (2.5s)
-#> ✔ Installed photoplate 0.0.0.9000 (github::imperialnolini/photoplate@96c572a) (259ms)
-#> ✔ 1 pkg + 27 deps: upd 1, added 27, dld 28 (NA B) [44s]
+#> ℹ Getting 25 pkgs (14.57 MB) and 1 pkg with unknown size, 2 (15.62 MB) cached
+#> ✔ Cached copy of photoplate 0.0.0.9000 (source) is the latest build
+#> ✔ Cached copy of R6 2.5.1 (i386+x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of bit64 4.0.5 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of bit 4.0.5 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of cli 3.6.2 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of clipr 0.8.0 (i386+x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of crayon 1.5.2 (i386+x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of dplyr 1.1.4 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of fansi 1.0.6 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of generics 0.1.3 (i386+x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of glue 1.7.0 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of hms 1.1.3 (i386+x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of lifecycle 1.0.4 (i386+x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of magrittr 2.0.3 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of pillar 1.9.0 (i386+x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of pkgconfig 2.0.3 (i386+x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of readr 2.1.5 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of rlang 1.1.3 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of stringr 1.5.1 (i386+x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of tibble 3.2.1 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of tidyselect 1.2.1 (i386+x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of tzdb 0.4.0 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of utf8 1.2.4 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of vctrs 0.6.5 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of vroom 1.6.5 (x86_64-w64-mingw32) is the latest build
+#> ✔ Cached copy of withr 3.0.0 (i386+x86_64-w64-mingw32) is the latest build
+#> ✔ Installed photoplate 0.0.0.9000 (github::imperialnolini/photoplate@3cd2ae1) (1.1s)
+#> ✔ Installed R6 2.5.1  (1.1s)
+#> ✔ Installed bit64 4.0.5  (1.1s)
+#> ✔ Installed bit 4.0.5  (1.1s)
+#> ✔ Installed cli 3.6.2  (1.1s)
+#> ✔ Installed clipr 0.8.0  (1.1s)
+#> ✔ Installed crayon 1.5.2  (1.1s)
+#> ✔ Installed dplyr 1.1.4  (1.1s)
+#> ✔ Installed fansi 1.0.6  (1.2s)
+#> ✔ Installed generics 0.1.3  (1.2s)
+#> ✔ Installed glue 1.7.0  (1.2s)
+#> ✔ Installed hms 1.1.3  (1.2s)
+#> ✔ Installed lifecycle 1.0.4  (1.2s)
+#> ✔ Installed magrittr 2.0.3  (1.2s)
+#> ✔ Installed pillar 1.9.0  (1.2s)
+#> ✔ Installed pkgconfig 2.0.3  (1.2s)
+#> ✔ Installed rlang 1.1.3  (1.2s)
+#> ✔ Installed stargazer 5.2.3  (1.4s)
+#> ✔ Installed readr 2.1.5  (1.7s)
+#> ✔ Installed stringi 1.8.3  (1.7s)
+#> ✔ Installed stringr 1.5.1  (676ms)
+#> ✔ Installed tidyselect 1.2.1  (570ms)
+#> ✔ Installed tibble 3.2.1  (706ms)
+#> ✔ Installed utf8 1.2.4  (520ms)
+#> ✔ Installed tzdb 0.4.0  (638ms)
+#> ✔ Installed vctrs 0.6.5  (547ms)
+#> ✔ Installed withr 3.0.0  (464ms)
+#> ✔ Installed vroom 1.6.5  (638ms)
+#> ✔ 1 pkg + 27 deps: upd 1, added 27 [9.5s]
 ```
 
 ## Example
@@ -198,7 +200,7 @@ photoplate(
   save_path,
   "model_output_label_for_crossref"
   )
-#> [1] "Saved .tex file to: C:\\Users\\imper\\AppData\\Local\\Temp\\RtmpAPlxr4\\photoplate_example1050c5e5375c7.tex"
+#> [1] "Saved .tex file to: C:\\Users\\imper\\AppData\\Local\\Temp\\RtmpKEWx68\\photoplate_example137104f577f0f.tex"
 
 # That code will make a .tex file with the stargazer::stargazer() output
 # of the model we estimated and with "!h" as the table format argument.
