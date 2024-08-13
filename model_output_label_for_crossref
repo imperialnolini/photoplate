@@ -1,0 +1,39 @@
+% Edits to stargazer::stargazer() table made by photoplate::photoplate() v.0.0.0.9000 by Nolan Siegel, nolan.s.siegel at gmail.com
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Tue, Aug 13, 2024 - 9:32:46 AM
+\begin{table}[!h] \centering 
+  \caption{Another table, this time with a test title} 
+  \label{C:\Users\imper\AppData\Local\Temp\RtmpgzLyxW\photoplate_example835849295933.tex}
+  \footnotesize
+\begin{tabular}{@{\extracolsep{5pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{Test DV} \\ 
+ & 1984 & 1988 \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ x1 & $-$20.000$^{***}$ & $-$19.996$^{***}$ \\ 
+  & (0.000) & (0.299) \\ 
+  & & \\ 
+ x2 & 30.000$^{***}$ &  \\ 
+  & (0.000) &  \\ 
+  & & \\ 
+ Constant & 10.491$^{***}$ & 150,153,908.000$^{***}$ \\ 
+  & (0.008) & (1,721,721.000) \\ 
+  & & \\ 
+\hline \\[-1.8ex] 
+For fun? & Yes & Yes \\ 
+\hline \\[-1.8ex] 
+Observations & 10,000 & 10,000 \\ 
+R$^{2}$ & 1.000 & 0.309 \\ 
+Adjusted R$^{2}$ & 1.000 & 0.309 \\ 
+Residual Std. Error & 0.289 (df = 9997) & 86,300,788.000 (df = 9998) \\ 
+F Statistic & 646,745,117,735,764,099,082.000$^{***}$ (df = 2; 9997) & 4,475.741$^{***}$ (df = 1; 9998) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular} \\
+\footnotesize
+\caption*{\footnotesize \centering \textit{Note:} $^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01. Note. Note2.}
+\end{table} 

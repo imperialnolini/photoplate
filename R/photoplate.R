@@ -1,9 +1,9 @@
 #' Customize stargazer::stargazer() regression tables for inclusion in LaTeX documents.
 #'
-#' @param this_stargazer Call of stargazer::stargazer() on regression model output(s).
+#' @param stargazer_call Call of stargazer::stargazer() on regression model output(s).
 #' @param position String. Position parameter for the table in LaTeX - e.g., "h", "t", "b", "p", "!", "H". Note "!h" is similar (though not necessarily identical to) "H" and using "H" is possible only if you first load the "float" package in your LaTeX document's preamble.
-#' @param filepath String. Filepath on your computer where you want the final .tex file to save; include ending of "filename.tex" for the filename and file extension. For example, "path/to/folder/filename.tex" would be fine.
 #' @param label String. LaTeX-internal label for the table. Can use it for cross referencing.
+#' @param filepath String. Filepath on your computer where you want the final .tex file to save; include ending of "filename.tex" for the filename and file extension. For example, "path/to/folder/filename.tex" would be fine.
 #'
 #' @return Returns a string message with the filepath to the .tex file with your LaTeX-customized regression model output.
 #' @export
@@ -78,7 +78,7 @@
 #'
 #' ## Let's run it:
 #' photoplate(
-#'   this_stargazer = stargazer::stargazer(
+#'   stargazer::stargazer(
 #'     model,
 #'     title = "A table! With exclamation marks in the title!",
 #'     dep.var.labels = "Dependent variable we generated for testing",
@@ -88,28 +88,31 @@
 #'               "Could also have written one long note instead.",
 #'               "Just make sure each note has a period at the end."),
 #'     table.layout = "m=!ldc#-!t-!a-!s=!n"),
-#'   "!h",
-#'   save_path,
-#'   "model_output_label_for_crossref"
+#'   position = "!h",
+#'   label = "model_output_label_for_crossref",
+#'   filepath = save_path
 #'   )
+#'  ## In general, the function seems to work best when you DON'T include
+#'  ## "stargazer_call =" in the function call, so best to leave that out and
+#'  ## simply enter the stargazer call as the first parameter without explicitly
+#'  ## identifying it.
 #'
 #'  ## Running the function like this will return something like the following:
 #'  ## "Saved .tex file to: **temporary directory**\photoplate_example.tex"
 #'
 #'  ## All done! The file is there, and it compiles correctly in LaTeX. To
-#'  ## conclude, I'll go ahead and remove that example file from my temporary
-#'  ## directory, though normally I of course would keep the generated files for
-#'  ## use when writing.
+#'  ## conclude, we can remove that example file from the temporary
+#'  ## directory, though normally we would keep it for use when writing.
 #'  file.remove(save_path)
-photoplate <- function(this_stargazer, #stargazer::stargazer() call on regression model(s)
+photoplate <- function(stargazer_call, #stargazer::stargazer() call on regression model(s)
                        position, #enter as string
-                       filepath, #don't forget the ".tex" extension
-                       label #enter as string
+                       label, #enter as string
+                       filepath #don't forget the ".tex" extension
                        ){
 
   # s is stargazer output
   s <- utils::capture.output(
-    this_stargazer
+    stargazer_call
   )
 
   # Make changes for position

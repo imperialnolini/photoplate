@@ -148,6 +148,11 @@ stargazer::stargazer() call seems fine, it’s time to run photoplate()
 for real. This time, however, we won’t pass in arguments for the “type”
 or “out” keyword parameters.
 
+In general, the function seems to work best when you DON’T include
+“stargazer_call =” in the function call, so best to leave that out and
+simply enter the stargazer call as the first parameter without
+explicitly identifying it.
+
 **Note any call to the function makes a .tex file with edits to the the
 regular stargazer::stargazer() LaTeX-formatted output, and the function
 call will return the filepath where it saved the .tex file.**
@@ -156,7 +161,7 @@ Let’s run it:
 
 ``` r
 photoplate(
-  this_stargazer = stargazer::stargazer(
+  stargazer::stargazer(
     model,
     title = "A table! With exclamation marks in the title!",
     dep.var.labels = "Dependent variable we generated for testing",
@@ -167,8 +172,8 @@ photoplate(
               "Just make sure each note has a period at the end."),
     table.layout = "m=!ldc#-!t-!a-!s=!n"),
   position = "!h",
-  filepath = "auxiliaries/example_output.tex",
-  label = "model_output_label_for_crossref"
+  label = "model_output_label_for_crossref",
+  filepath = "auxiliaries/example_output.tex"
   )
 #> [1] "Saved .tex file to: auxiliaries/example_output.tex"
 ```
@@ -182,7 +187,7 @@ the PDF of it):
 
 ## Notes about the function’s parameters
 
-- *this_stargazer*: Call of stargazer::stargazer() on regression model
+- *stargazer_call*: Call of stargazer::stargazer() on regression model
   output(s). DO NOT enter arguments for the keyword parameters “type”
   and “out” (though technically it’s ok to have values for them which
   would yield a latex output, but it’s probably easier to leave them out
@@ -194,13 +199,13 @@ the PDF of it):
   identical) to “H” and that using “H” is possible only if you first
   load the “float” package in your LaTeX document’s preamble.
 
+- *label*: String. LaTeX-internal label for the table. Can use it for
+  cross referencing (e.g., with the hyperref package).
+
 - *filepath*: String. Filepath on your computer where you want the final
   .tex file to save; include ending of “filename.tex” for the filename
   and file extension. For example, “path/to/folder/filename.tex” would
   be fine.
-
-- *label*: String. LaTeX-internal label for the table. Can use it for
-  cross referencing (e.g., with the hyperref package).
 
 ## Wrapping up
 
@@ -214,3 +219,7 @@ specify anything for the “type” or “out” parameters, though you can use
 the other parameters to change the default output of the function. It is
 worth verifying the output looks good by generating a textual output
 before running photoplate().
+
+Finally, if you encounter any issues using the package, please feel free
+to email me at <nolan.s.siegel@gmail.com>; I’ll look forward to
+improving anything that might be helpful. Thank you.
