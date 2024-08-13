@@ -32,12 +32,20 @@ knitr::include_graphics("auxiliaries/photographic_plate.jpeg")
 
 ## Installation
 
-You can install the development version of photoplate from GitHub by running the following:
+You can (probably) install the development version of photoplate from GitHub by running the following:
 
-```{r installation, message = F}
+```{r first pass installation, message = F}
 # install.packages("pak")
 pak::pak("imperialnolini/photoplate")
 ```
+
+If that doesn't work, there's one more option we can try. Note you may be prompted to update a few packages as we try this (that should be fine to do), and you may get some warning messages at the end. If you do, despite them, try loading the package with "library(photoplate)" to see if the package was successfully installed. Here's the code to install it:
+
+```{r second pass at installation, message = F}
+# install.packages("devtools")
+devtools::install_github("imperialnolini/photoplate")
+```
+
 
 ## Example
 
