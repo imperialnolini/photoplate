@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # photoplate
@@ -162,6 +156,26 @@ photoplate(
 
 All done! Let’s load the LaTeX file here in Markdown to see how it
 looks:
+
+<div class="figure" style="text-align: center">
+
+<embed src="auxiliaries/latex_file.pdf" title="LaTeX PDF." width="75%" type="application/pdf" />
+<p class="caption">
+LaTeX PDF.
+</p>
+
+</div>
+
+text
+
+<div class="figure" style="text-align: center">
+
+<embed src="auxiliaries/latex_file.pdf" title="your caption" width="0.3\linewidth" type="application/pdf" />
+<p class="caption">
+your caption
+</p>
+
+</div>
 
 ## Notes about the function’s parameters
 
