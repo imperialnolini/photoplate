@@ -79,42 +79,38 @@ stargazer::stargazer(model,
                      add.lines = list(c("Was it fun to run this model?", "Yes")),
                      notes = c("This is a note.",
                                "Here's another note.",
-                               "Note a few small notes have an identical result to one long note.",
-                               "Also note all these notes will be combined for the final output.",
-                               "And note we could have included more models in the stargazer::stargazer() call or passed in more arguments with the normal results for the function."),
+                               "Also, a few small notes have an identical result to one long note."),
                      table.layout = "m=!ldc#-!t-!a-!s=!n",
                      type = "text")
 #> 
 #> A table! With exclamation marks in the title!
-#> ==================================================================================================================================================================================
-#>                                                                                               Dependent variable:                                                                 
-#>                               ----------------------------------------------------------------------------------------------------------------------------------------------------
-#>                                                                                   Dependent variable we generated for testing                                                     
-#> ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#> x1                                                                                                 -20.000***                                                                     
-#>                                                                                                     (0.000)                                                                       
-#>                                                                                                                                                                                   
-#> x2                                                                                                 30.000***                                                                      
-#>                                                                                                     (0.000)                                                                       
-#>                                                                                                                                                                                   
-#> Constant                                                                                           10.491***                                                                      
-#>                                                                                                     (0.008)                                                                       
-#>                                                                                                                                                                                   
-#> ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#> Was it fun to run this model?                                                                         Yes                                                                         
-#> ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#> Observations                                                                                         10,000                                                                       
-#> R2                                                                                                   1.000                                                                        
-#> Adjusted R2                                                                                          1.000                                                                        
-#> Residual Std. Error                                                                            0.289 (df = 9997)                                                                  
-#> F Statistic                                                                    646,745,117,735,764,099,082.000*** (df = 2; 9997)                                                  
-#> ==================================================================================================================================================================================
-#> Note:                                                                                                                                                  *p<0.1; **p<0.05; ***p<0.01
-#>                                                                                                                                                                    This is a note.
-#>                                                                                                                                                               Here's another note.
-#>                                                                                                                  Note a few small notes have an identical result to one long note.
-#>                                                                                                                   Also note all these notes will be combined for the final output.
-#>                               And note we could have included more models in the stargazer::stargazer() call or passed in more arguments with the normal results for the function.
+#> ================================================================================================
+#>                                                      Dependent variable:                        
+#>                               ------------------------------------------------------------------
+#>                                          Dependent variable we generated for testing            
+#> ------------------------------------------------------------------------------------------------
+#> x1                                                        -20.000***                            
+#>                                                            (0.000)                              
+#>                                                                                                 
+#> x2                                                        30.000***                             
+#>                                                            (0.000)                              
+#>                                                                                                 
+#> Constant                                                  10.491***                             
+#>                                                            (0.008)                              
+#>                                                                                                 
+#> ------------------------------------------------------------------------------------------------
+#> Was it fun to run this model?                                Yes                                
+#> ------------------------------------------------------------------------------------------------
+#> Observations                                                10,000                              
+#> R2                                                          1.000                               
+#> Adjusted R2                                                 1.000                               
+#> Residual Std. Error                                   0.289 (df = 9997)                         
+#> F Statistic                           646,745,117,735,764,099,082.000*** (df = 2; 9997)         
+#> ================================================================================================
+#> Note:                                                                *p<0.1; **p<0.05; ***p<0.01
+#>                                                                                  This is a note.
+#>                                                                             Here's another note.
+#>                               Also, a few small notes have an identical result to one long note.
 ```
 
 Note you should always check that form of textual output - especially if
@@ -154,7 +150,7 @@ photoplate(
   filepath = save_path,
   label = "model_output_label_for_crossref"
   )
-#> [1] "Saved .tex file to: C:\\Users\\imper\\AppData\\Local\\Temp\\RtmpOemcCL\\photoplate_examplee9e03442868.tex"
+#> [1] "Saved .tex file to: C:\\Users\\imper\\AppData\\Local\\Temp\\RtmpS0Kuy8\\photoplate_exampled37421a625c5.tex"
 ```
 
 All done! The file is there, and it compiles correctly in LaTeX. To

@@ -76,9 +76,7 @@ stargazer::stargazer(model,
                      add.lines = list(c("Was it fun to run this model?", "Yes")),
                      notes = c("This is a note.",
                                "Here's another note.",
-                               "Note a few small notes have an identical result to one long note.",
-                               "Also note all these notes will be combined for the final output.",
-                               "And note we could have included more models in the stargazer::stargazer() call or passed in more arguments with the normal results for the function."),
+                               "Also, a few small notes have an identical result to one long note."),
                      table.layout = "m=!ldc#-!t-!a-!s=!n",
                      type = "text")
 ```
