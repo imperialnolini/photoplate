@@ -159,7 +159,7 @@ photoplate(
 All done! Let’s look at the LaTeX file (created with
 [this](auxiliaries/latex_file.tex) code then converted into a JPEG):
 
-# `{r latex pdf, echo=FALSE, out.width = '75%', fig.align = 'center'} # knitr::include_graphics("auxiliaries/latex_file.jpg") #`
+<img src="auxiliaries/latex_file.jpg" width="75%" style="display: block; margin: auto;" />
 
 ## Notes about the function’s parameters
 
