@@ -23,7 +23,7 @@ The goal of photoplate is to customize stargazer::stargazer() regression tables 
 Until the later 1980s, astronomers used glass photographic plates to record their observations. These plates made it possible for them to share what they saw when gazing toward the stars; in that spirit, this package's eponymous function is named "photoplate."
 
 ```{r photographic plate, echo=FALSE, fig.cap="A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen.", out.width = '75%', fig.align = 'center'}
-knitr::include_graphics("photographic_plate.jpeg")
+knitr::include_graphics("auxiliaries/photographic_plate.jpeg")
 ```
 [Image source and more information about photographic plates](https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/)
 
@@ -76,7 +76,8 @@ stargazer::stargazer(model,
                      add.lines = list(c("Was it fun to run this model?", "Yes")),
                      notes = c("This is a note.",
                                "Here's another note.",
-                               "Also, a few small notes have an identical result to one long note."),
+                               "Could also have written one long note instead.",
+                               "Just make sure each note has a period at the end."),
                      table.layout = "m=!ldc#-!t-!a-!s=!n",
                      type = "text")
 ```
@@ -97,20 +98,18 @@ photoplate(
     add.lines = list(c("Was it fun to run this model?", "Yes")),
     notes = c("This is a note.",
               "Here's another note.",
-              "A few small notes are ultimately similar to one long one."),
+              "Could also have written one long note instead.",
+              "Just make sure each note has a period at the end."),
     table.layout = "m=!ldc#-!t-!a-!s=!n"),
-    position = "!h",
-    filepath = save_path,
-    label = "model_output_label_for_crossref",
-  "!h",
-  "example_output.tex",
-  "model_output_label_for_crossref"
+  position = "!h",
+  filepath = "auxiliaries/example_output.tex",
+  label = "model_output_label_for_crossref"
   )
 ```
 
-All done! The file is there, and it compiles correctly in LaTeX. To conclude, I'll go ahead and remove that example file from my temporary directory, though normally I of course would keep the generated files for use when writing:
-```{r remove temporary file}
-file.remove(save_path)
+All done! Let's load the LaTeX file here in Markdown to see how it looks:
+```{=latex}
+\input("example_output.tex")
 ```
 
 

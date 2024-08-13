@@ -58,7 +58,8 @@ stargazer::stargazer(model,
                      add.lines = list(c("Was it fun to run this model?", "Yes")),
                      notes = c("This is a note.",
                                "Here's another note.",
-                               "Also, a few small notes have an identical result to one long note."),
+                               "Could also have written one long note instead.",
+                               "Just make sure each note has a period at the end."),
                      table.layout = "m=!ldc#-!t-!a-!s=!n",
                      type = "text")
 
@@ -96,12 +97,13 @@ photoplate(
     add.lines = list(c("Was it fun to run this model?", "Yes")),
     notes = c("This is a note.",
               "Here's another note.",
-              "Also, a few small notes have an identical result to one long note."),
+              "Could also have written one long note instead.",
+              "Just make sure each note has a period at the end."),
     table.layout = "m=!ldc#-!t-!a-!s=!n"),
-    position = "!h",
-    filepath = save_path,
-    label = "model_output_label_for_crossref"
-    )
+  "!h",
+  "example_output.tex",
+  "model_output_label_for_crossref"
+  )
 
  ## Running the function like this will return something like the following:
  ## "Saved .tex file to: **temporary directory**\photoplate_example.tex"

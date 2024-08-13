@@ -17,7 +17,7 @@ package’s eponymous function is named “photoplate.”
 
 <div class="figure" style="text-align: center">
 
-<img src="photographic_plate.jpeg" alt="A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen." width="75%" />
+<img src="auxiliaries/photographic_plate.jpeg" alt="A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen." width="75%" />
 <p class="caption">
 A collection of glass plates from 1909 to 1922 capture the moon in
 different phases. Niels Bohr Institute, University of Copenhagen.
@@ -79,38 +79,40 @@ stargazer::stargazer(model,
                      add.lines = list(c("Was it fun to run this model?", "Yes")),
                      notes = c("This is a note.",
                                "Here's another note.",
-                               "Also, a few small notes have an identical result to one long note."),
+                               "Could also have written one long note instead.",
+                               "Just make sure each note has a period at the end."),
                      table.layout = "m=!ldc#-!t-!a-!s=!n",
                      type = "text")
 #> 
 #> A table! With exclamation marks in the title!
-#> ================================================================================================
-#>                                                      Dependent variable:                        
-#>                               ------------------------------------------------------------------
-#>                                          Dependent variable we generated for testing            
-#> ------------------------------------------------------------------------------------------------
-#> x1                                                        -20.000***                            
-#>                                                            (0.000)                              
-#>                                                                                                 
-#> x2                                                        30.000***                             
-#>                                                            (0.000)                              
-#>                                                                                                 
-#> Constant                                                  10.491***                             
-#>                                                            (0.008)                              
-#>                                                                                                 
-#> ------------------------------------------------------------------------------------------------
-#> Was it fun to run this model?                                Yes                                
-#> ------------------------------------------------------------------------------------------------
-#> Observations                                                10,000                              
-#> R2                                                          1.000                               
-#> Adjusted R2                                                 1.000                               
-#> Residual Std. Error                                   0.289 (df = 9997)                         
-#> F Statistic                           646,745,117,735,764,099,082.000*** (df = 2; 9997)         
-#> ================================================================================================
-#> Note:                                                                *p<0.1; **p<0.05; ***p<0.01
-#>                                                                                  This is a note.
-#>                                                                             Here's another note.
-#>                               Also, a few small notes have an identical result to one long note.
+#> ===============================================================================
+#>                                              Dependent variable:               
+#>                               -------------------------------------------------
+#>                                  Dependent variable we generated for testing   
+#> -------------------------------------------------------------------------------
+#> x1                                               -20.000***                    
+#>                                                    (0.000)                     
+#>                                                                                
+#> x2                                                30.000***                    
+#>                                                    (0.000)                     
+#>                                                                                
+#> Constant                                          10.491***                    
+#>                                                    (0.008)                     
+#>                                                                                
+#> -------------------------------------------------------------------------------
+#> Was it fun to run this model?                        Yes                       
+#> -------------------------------------------------------------------------------
+#> Observations                                       10,000                      
+#> R2                                                  1.000                      
+#> Adjusted R2                                         1.000                      
+#> Residual Std. Error                           0.289 (df = 9997)                
+#> F Statistic                   646,745,117,735,764,099,082.000*** (df = 2; 9997)
+#> ===============================================================================
+#> Note:                                               *p<0.1; **p<0.05; ***p<0.01
+#>                                                                 This is a note.
+#>                                                            Here's another note.
+#>                                  Could also have written one long note instead.
+#>                               Just make sure each note has a period at the end.
 ```
 
 Note you should always check that form of textual output - especially if
@@ -118,55 +120,50 @@ you use the various stargazer::stargazer() parameters to format the
 output (e.g., renaming things and/or adding notes, as done here) - prior
 to using photoplate().
 
-For this example, we’ll save the .tex file in my computer’s temporary
-directory with a name similar to “photoplate_example” and “.tex” as the
-file’s extension. When using the package for real, it’s worth being much
-more intentional about where to save regression output tables; this is
-for the sake of illustration. Let’s generate that save filepath:
-
-``` r
-save_path = tempfile(pattern = "photoplate_example",
-                     fileext = ".tex",
-                     tmpdir = tempdir(check = TRUE))
-```
-
-Returning to the model output, having verified it seems fine by looking
-at the textual output earlier, it’s time to run photoplate() for real.
+Having verified the model output seems fine by looking at that textual
+output, it’s time to run photoplate() for real. This time, however, we
+won’t pass in arguments for the “type” or “out” keyword parameters.
 
 **Note any call to the function makes a .tex file (1) with the
-stargazer::stargazer() LaTeX-formatted output from the first arguemnt
-(2) and with the position parameter as whatever you pass in as the
-second argument (3) in a file saved at the filepath given as the third
-argument (4) with the LaTeX-internal label of what you enter for the
-fourth argument (for cross-referencing purposes). The function call will
-also return the save filepath.**
+stargazer::stargazer() LaTeX-formatted output from the first argument
+minus the argument for a textual output (2) and with the position
+parameter as whatever you pass in as the second argument (3) in a file
+saved at the filepath given as the third argument (4) with the
+LaTeX-internal label of what you enter for the fourth argument (for
+cross-referencing purposes). The function call will also return the save
+filepath.**
 
 Let’s run it:
 
 ``` r
 photoplate(
-  this_stargazer = stargazer::stargazer(model),
+  this_stargazer = stargazer::stargazer(
+    model,
+    title = "A table! With exclamation marks in the title!",
+    dep.var.labels = "Dependent variable we generated for testing",
+    add.lines = list(c("Was it fun to run this model?", "Yes")),
+    notes = c("This is a note.",
+              "Here's another note.",
+              "Could also have written one long note instead.",
+              "Just make sure each note has a period at the end."),
+    table.layout = "m=!ldc#-!t-!a-!s=!n"),
   position = "!h",
-  filepath = save_path,
+  filepath = "auxiliaries/example_output.tex",
   label = "model_output_label_for_crossref"
   )
-#> [1] "Saved .tex file to: C:\\Users\\imper\\AppData\\Local\\Temp\\RtmpS0Kuy8\\photoplate_exampled37421a625c5.tex"
+#> [1] "Saved .tex file to: auxiliaries/example_output.tex"
 ```
 
-All done! The file is there, and it compiles correctly in LaTeX. To
-conclude, I’ll go ahead and remove that example file from my temporary
-directory, though normally I of course would keep the generated files
-for use when writing:
-
-``` r
-file.remove(save_path)
-#> [1] TRUE
-```
+All done! Let’s load the LaTeX file here in Markdown to see how it
+looks:
 
 ## Notes about the function’s parameters
 
 - *this_stargazer*: Call of stargazer::stargazer() on regression model
-  output(s).
+  output(s). DO NOT enter arguments for the keyword parameters “type”
+  and “out” (though technically it’s ok to have values for them which
+  would yield a latex output, but it’s probably easier to leave them out
+  entirely).
 
 - *position*: String. Position parameter for the table in LaTeX - e.g.,
   “h”, “t”, “b”, “p”, “!”, “H”. Note “!h” is similar (though not
