@@ -49,10 +49,10 @@
 #' ## For this example, we'll save the .tex file in your temporary directory.
 #' ## Let's get that save filepath:
 #' save_path = tempfile(pattern = "photoplate_example",
-#'                      fileext = ".txt",
-#'                      tmpdir = tempdir(check = T))
+#'                      fileext = ".tex",
+#'                      tmpdir = tempdir(check = TRUE))
 #' ## This code says we want a filename that's close to "photoplate_example" and
-#' ## has ".txt" as its extension, and we want it to go in your computer's
+#' ## has ".tex" as its extension, and we want it to go in your computer's
 #' ## temporary directory.
 #'
 #' ## Having verified that model output seems fine, we feed it to photoplate():
@@ -98,25 +98,27 @@ photoplate <- function(this_stargazer, #stargazer::stargazer() call on regressio
   # h is effectively f with rownums
   h <- utils::read.delim2(filepath, header = F, sep = "\n", dec = ".") %>%
     dplyr::mutate(rownum = dplyr::row_number())
-  # V1 is name of column with LaTeX code
+
+  # Get name of column with model information
+  latex_column <- colnames(h)[1]
 
   # Find rownum for \label() line
   label_row <- h %>%
-    dplyr::filter(base::grepl("label", V1)) %>%
+    dplyr::filter(base::grepl("label", !!base::as.name(latex_column))) %>%
     utils::tail(1) %>%
     dplyr::select(rownum) %>%
     as.integer()
 
   # Find rownum for last line before comment
   precomment_row <- h %>%
-    dplyr::filter(base::grepl("hline.*-1.8ex]", V1)) %>%
+    dplyr::filter(base::grepl("hline.*-1.8ex]", !!base::as.name(latex_column))) %>%
     utils::tail(1) %>%
     dplyr::select(rownum) %>%
     as.integer()
 
   # Find rownum for end of tabular environment
   postcomment_row <- h %>%
-    dplyr::filter(base::grepl("end\\{tabular", V1)) %>%
+    dplyr::filter(base::grepl("end\\{tabular", !!base::as.name(latex_column))) %>%
     utils::tail(1) %>%
     dplyr::select(rownum) %>%
     as.integer()
@@ -127,7 +129,7 @@ photoplate <- function(this_stargazer, #stargazer::stargazer() call on regressio
   # Pull comment
   comment = c("\\textit{Note:}")
   for (this_rownum in comment_rows) {
-    this_row <- h %>% dplyr::filter(rownum == this_rownum) %>% dplyr::select(V1)
+    this_row <- h %>% dplyr::filter(rownum == this_rownum) %>% dplyr::select(!!base::as.name(latex_column))
     # print(this_row)
     this_row <- this_row %>%
       # FOR P-VALUES:
@@ -156,22 +158,22 @@ photoplate <- function(this_stargazer, #stargazer::stargazer() call on regressio
 
   # Save final file
   readr::write_lines(c(
-    base::apply(h %>% dplyr::filter(rownum %in% 1 : (label_row - 1)) %>% dplyr::select(V1),
+    base::apply(h %>% dplyr::filter(rownum %in% 1 : (label_row - 1)) %>% dplyr::select(!!base::as.name(latex_column)),
                 1, base::paste0, collapse = ""),
     base::paste0("  \\label{", label, "}"),
     "  \\footnotesize",
-    base::apply(h %>% dplyr::filter(rownum %in% (label_row + 1) : precomment_row) %>% dplyr::select(V1),
+    base::apply(h %>% dplyr::filter(rownum %in% (label_row + 1) : precomment_row) %>% dplyr::select(!!base::as.name(latex_column)),
                 1, base::paste0, collapse = ""),
     # Add two slashes (when back in Latex) to end of "\end{tabular} " line
     # Necessary to do this given that's what the line will/ should be?
     base::paste0(
-      base::apply(h %>% dplyr::filter(rownum %in% postcomment_row) %>% dplyr::select(V1),
+      base::apply(h %>% dplyr::filter(rownum %in% postcomment_row) %>% dplyr::select(!!base::as.name(latex_column)),
                   1, base::paste0, collapse = ""),
       "\\\\"
     ),
     "\\footnotesize",
     paste0("\\caption*{\\footnotesize \\centering ", comment, "}"),
-    base::apply(h %>% dplyr::filter(rownum %in% (postcomment_row + 1) : nrow(h)) %>% dplyr::select(V1),
+    base::apply(h %>% dplyr::filter(rownum %in% (postcomment_row + 1) : nrow(h)) %>% dplyr::select(!!base::as.name(latex_column)),
                 1, base::paste0, collapse = "")
   ),
   filepath)

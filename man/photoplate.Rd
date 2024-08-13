@@ -61,10 +61,10 @@ stargazer::stargazer(model, type = "text")
 ## For this example, we'll save the .tex file in your temporary directory.
 ## Let's get that save filepath:
 save_path = tempfile(pattern = "photoplate_example",
-                     fileext = ".txt",
-                     tmpdir = tempdir(check = T))
+                     fileext = ".tex",
+                     tmpdir = tempdir(check = TRUE))
 ## This code says we want a filename that's close to "photoplate_example" and
-## has ".txt" as its extension, and we want it to go in your computer's
+## has ".tex" as its extension, and we want it to go in your computer's
 ## temporary directory.
 
 ## Having verified that model output seems fine, we feed it to photoplate():
