@@ -52,41 +52,63 @@ y = 10 + (-20*x1) + (30*x2) + e
 model <- lm(y ~ x1 + x2)
 
 ## We can feed the model to stargazer::stargazer() to look at its results:
-stargazer::stargazer(model, type = "text")
+stargazer::stargazer(model,
+                     title = "A table! With exclamation marks in the title!",
+                     dep.var.labels = "Dependent variable we generated for testing",
+                     add.lines = list(c("Was it fun to run this model?", "Yes")),
+                     notes = c("This is a note.",
+                               "Here's another note.",
+                               "Also, a few small notes have an identical result to one long note."),
+                     table.layout = "m=!ldc#-!t-!a-!s=!n",
+                     type = "text")
 
 ## Note you should always check that form of textual output - especially
 ## if you use the various stargazer::stargazer() parameters to format the
 ## output (e.g., renaming the variables) - prior to using photoplate().
 
-## For this example, we'll save the .tex file in your temporary directory.
-## Let's get that save filepath:
+## For this example, we'll save the .tex file in your computer's temporary
+## directory with a name similar to "photoplate_example" and ".tex" as the
+## file's extension. When using the package for real, it's worth being more
+## intentional about where to save regression output tables; this is for the
+## sake of illustration. Let's generate that save filepath:
 save_path = tempfile(pattern = "photoplate_example",
                      fileext = ".tex",
                      tmpdir = tempdir(check = TRUE))
-## This code says we want a filename that's close to "photoplate_example" and
-## has ".tex" as its extension, and we want it to go in your computer's
-## temporary directory.
 
-## Having verified that model output seems fine, we feed it to photoplate()
-## with arguments for the additional parameters:
+## Returning to the model output, having verified it seems fine by looking at
+## the textual output earlier, it's time to run photoplate() for real.
+
+## Note any call to the function makes a .tex file (1) with the
+## stargazer::stargazer() LaTeX-formatted output from the first argument
+## minus the argument for a textual output (2) and with the position
+## parameter as whatever you pass in as the second argument (3) in a file
+## saved at the filepath given as the third argument (4) with the
+## LaTeX-internal label of what you enter for the fourth argument (for
+## cross-referencing purposes). The function call will also return the save
+## filepath.
+
+## Let's run it:
 photoplate(
-   stargazer::stargazer(model),
-   "!h",
-   save_path,
-   "model_output_label_for_crossref"
-   )
-
- ## That code will make a .tex file with the stargazer::stargazer() output
- ## of the model we estimated and with "!h" as the table format argument.
- ## That file will save in your temporary directory with a filename like
- ## "photoplate_example.tex" and with "model_output_label_for_crossref"
- ## as its LaTeX-internal label for cross-referencing. When you run the
- ## function for real, you should specify the directory where you want the
- ## file to save and include the specific name you would like for the file.
+  this_stargazer = stargazer::stargazer(
+    model,
+    title = "A table! With exclamation marks in the title!",
+    dep.var.labels = "Dependent variable we generated for testing",
+    add.lines = list(c("Was it fun to run this model?", "Yes")),
+    notes = c("This is a note.",
+              "Here's another note.",
+              "Also, a few small notes have an identical result to one long note."),
+    table.layout = "m=!ldc#-!t-!a-!s=!n"),
+    position = "!h",
+    filepath = save_path,
+    label = "model_output_label_for_crossref"
+    )
 
  ## Running the function like this will return something like the following:
  ## "Saved .tex file to: **temporary directory**\photoplate_example.tex"
 
- ## To conclude, we remove that example file from your temporary directory:
+ ## All done! The file is there, and it compiles correctly in LaTeX. To
+ ## conclude, I'll go ahead and remove that example file from my temporary
+ ## directory, though normally I of course would keep the generated files for
+ ## use when writing.
  file.remove(save_path)
 }
