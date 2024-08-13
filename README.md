@@ -55,9 +55,11 @@ We’ll estimate a model for y = b0 + b1*x1 + b2*x2 + e, where: \* b0 = 10
 \* b1 = -20 \* b2 = 30 \* e = error following a uniform distribution
 from 0.0001 to 1
 
-We begin by generating 10000 datapoints (let’s sample with replacement
-from 0 to 10000000 for x1 and x2 and from 0 to 1 without replacement for
-e then calculate values of y per the betas defined above):
+We’ll generate 10000 datapoints for our analysis. Let’s sample with
+replacement from 0 to 10000000 for x1 and x2, our two explanatory
+variables, and from 0.0001 to 1 without replacement for e, our error.
+Then, we’ll calculate values of y per the betas defined above. The data
+generation:
 
 ``` r
 base::set.seed(1)
