@@ -124,6 +124,11 @@ photoplate <- function(this_stargazer, #stargazer::stargazer() call on regressio
   h <- utils::read.delim2(filepath, header = F, sep = "\n", dec = ".") %>%
     dplyr::mutate(rownum = dplyr::row_number())
 
+  # Add row at top with info about version of photoplate() used
+  h <- base::rbind(tibble::tribble(~V1, ~rownum,
+                                   "% Edits to stargazer::stargazer() table made by photoplate::photoplate() v.0.0.0.9000 by Nolan Siegel, nolan.s.siegel at gmail.com", 0),
+                   h)
+
   # Get name of column with model information
   latex_column <- colnames(h)[1]
 
@@ -183,7 +188,7 @@ photoplate <- function(this_stargazer, #stargazer::stargazer() call on regressio
 
   # Save final file
   readr::write_lines(c(
-    base::apply(h %>% dplyr::filter(rownum %in% 1 : (label_row - 1)) %>% dplyr::select(!!base::as.name(latex_column)),
+    base::apply(h %>% dplyr::filter(rownum %in% 0 : (label_row - 1)) %>% dplyr::select(!!base::as.name(latex_column)),
                 1, base::paste0, collapse = ""),
     base::paste0("  \\label{", label, "}"),
     "  \\footnotesize",
