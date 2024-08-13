@@ -70,10 +70,20 @@ model <- lm(y ~ x1 + x2)
 
 We can feed the model to stargazer::stargazer() to look at its results:
 ```{r review results}
-stargazer::stargazer(model, type = "text")
+stargazer::stargazer(model,
+                     title = "A table! With exclamation marks in the title!",
+                     dep.var.labels = "Dependent variable we generated for testing",
+                     add.lines = list(c("Was it fun to run this model?", "Yes")),
+                     notes = c("This is a note.",
+                               "Here's another note.",
+                               "Note a few small notes have an identical result to one long note.",
+                               "Also note all these notes will be combined for the final output.",
+                               "And note we could have included more models in the stargazer::stargazer() call or passed in more arguments with the normal results for the function."),
+                     table.layout = "m=!ldc#-!t-!a-!s=!n",
+                     type = "text")
 ```
 
-Note you should always check that form of textual output - especially if you use the various stargazer::stargazer() parameters to format the output (e.g., renaming the variables) - prior to using photoplate().
+Note you should always check that form of textual output - especially if you use the various stargazer::stargazer() parameters to format the output (e.g., renaming things and/or adding notes, as done here) - prior to using photoplate().
 
 For this example, we'll save the .tex file in my computer's temporary directory with a name similar to "photoplate_example" and ".tex" as the file's extension. When using the package for real, it's worth being much more intentional about where to save regression output tables; this is for the sake of illustration. Let's generate that save filepath:
 ```{r save filepath}
