@@ -51,8 +51,8 @@ library(photoplate)
 
 Let’s estimate a linear model and reformat its stargazer LaTeX output.
 
-We’ll estimate a model for y = b0 + b1*x1 + b2*x2 + e, where: \* b0 = 10
-\* b1 = -20 \* b2 = 30 \* e = error following a uniform distribution
+We’ll estimate a model for y = b0 + b1\*x1 + b2\*x2 + e, where: \* b0 =
+10 \* b1 = -20 \* b2 = 30 \* e = error following a uniform distribution
 from 0.0001 to 1
 
 We’ll generate 10000 datapoints for our analysis. Let’s sample with
