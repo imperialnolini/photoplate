@@ -157,9 +157,9 @@ photoplate(
 ```
 
 All done! Let’s look at the LaTeX rendering of the photoplate() LaTeX
-table made (see [here](auxiliaries/latex_file.tex) for the .tex file
-used to create the document and [here](auxiliaries/latex_file.pdf) for
-the original PDF):
+table we made (see [here](auxiliaries/latex_file.tex) for the .tex file
+used to create this document and [here](auxiliaries/latex_file.pdf) for
+the PDF of it):
 
 <img src="auxiliaries/latex_file_image.jpg" width="75%" style="display: block; margin: auto;" />
 
