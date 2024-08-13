@@ -148,7 +148,7 @@ stargazer::stargazer() call seems fine, it’s time to run photoplate()
 for real. This time, however, we won’t pass in arguments for the “type”
 or “out” keyword parameters.
 
-In general, the photoplage::photoplate() function seems to work best
+In general, the photoplate::photoplate() function seems to work best
 when “stargazer_call =” is NOT included in its function call, so best to
 leave that out and simply enter the stargazer::stargazer() call as the
 first parameter without explicitly identifying it as such.
