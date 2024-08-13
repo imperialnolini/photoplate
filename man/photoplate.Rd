@@ -101,7 +101,7 @@ photoplate(
               "Just make sure each note has a period at the end."),
     table.layout = "m=!ldc#-!t-!a-!s=!n"),
   "!h",
-  "example_output.tex",
+  save_path,
   "model_output_label_for_crossref"
   )
 
