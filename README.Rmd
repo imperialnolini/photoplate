@@ -25,14 +25,14 @@ Until the later 1980s, astronomers used glass photographic plates to record thei
 ```{r photographic plate, echo=FALSE, fig.cap="A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen.", out.width = '75%', fig.align = 'center'}
 knitr::include_graphics("photographic_plate.jpeg")
 ```
-[Image source and more on photographic plates](https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/)
+[Image source and more information about photographic plates](https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/)
 
 
 ## Installation
 
 You can install the development version of photoplate from [GitHub](https://github.com/) with:
 
-```{r installation}
+```{r installation, message = F}
 # install.packages("pak")
 pak::pak("imperialnolini/photoplate")
 ```

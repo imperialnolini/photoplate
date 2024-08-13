@@ -25,7 +25,7 @@ different phases. Niels Bohr Institute, University of Copenhagen.
 
 </div>
 
-[Image source and more on photographic
+[Image source and more information about photographic
 plates](https://www.smithsonianmag.com/science-nature/obsolete-art-mapping-skies-glass-plates-can-still-teach-us-180971890/)
 
 ## Installation
@@ -36,96 +36,6 @@ You can install the development version of photoplate from
 ``` r
 # install.packages("pak")
 pak::pak("imperialnolini/photoplate")
-#> ℹ Loading metadata database✔ Loading metadata database ... done
-#>  
-#> → Will install 27 packages.
-#> → Will update 1 package.
-#> → Will download 25 CRAN packages (14.57 MB), cached: 2 (15.62 MB).
-#> → Will download 1 package with unknown size.
-#> + bit                     4.0.5      [dl] (1.13 MB)
-#> + bit64                   4.0.5      [dl] (492.93 kB)
-#> + cli                     3.6.2      [dl] (1.34 MB)
-#> + clipr                   0.8.0      [dl] (54.74 kB)
-#> + crayon                  1.5.2      [dl] (162.50 kB)
-#> + dplyr                   1.1.4      [dl] (1.56 MB)
-#> + fansi                   1.0.6      [dl] (313.99 kB)
-#> + generics                0.1.3      [dl] (79.48 kB)
-#> + glue                    1.7.0      [dl] (160.67 kB)
-#> + hms                     1.1.3      [dl] (103.58 kB)
-#> + lifecycle               1.0.4      [dl] (139.75 kB)
-#> + magrittr                2.0.3      [dl] (227.09 kB)
-#> + photoplate 0.0.0.9000 → 0.0.0.9000 [bld][cmp][dl] (GitHub: 2e0ab67)
-#> + pillar                  1.9.0      [dl] (659.10 kB)
-#> + pkgconfig               2.0.3      [dl] (22.20 kB)
-#> + R6                      2.5.1      [dl] (84.31 kB)
-#> + readr                   2.1.5      [dl] (1.16 MB)
-#> + rlang                   1.1.3      [dl] (1.58 MB)
-#> + stargazer               5.2.3      
-#> + stringi                 1.8.3      
-#> + stringr                 1.5.1      [dl] (318.73 kB)
-#> + tibble                  3.2.1      [dl] (690.23 kB)
-#> + tidyselect              1.2.1      [dl] (225.39 kB)
-#> + tzdb                    0.4.0      [dl] (1.02 MB)
-#> + utf8                    1.2.4      [dl] (150.04 kB)
-#> + vctrs                   0.6.5      [dl] (1.34 MB)
-#> + vroom                   1.6.5      [dl] (1.31 MB)
-#> + withr                   3.0.0      [dl] (245.68 kB)
-#> ℹ Getting 25 pkgs (14.57 MB) and 1 pkg with unknown size, 2 (15.62 MB) cached
-#> ✔ Cached copy of photoplate 0.0.0.9000 (source) is the latest build
-#> ✔ Cached copy of R6 2.5.1 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of bit64 4.0.5 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of bit 4.0.5 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of cli 3.6.2 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of clipr 0.8.0 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of crayon 1.5.2 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of dplyr 1.1.4 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of fansi 1.0.6 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of generics 0.1.3 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of glue 1.7.0 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of hms 1.1.3 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of lifecycle 1.0.4 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of magrittr 2.0.3 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of pillar 1.9.0 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of pkgconfig 2.0.3 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of readr 2.1.5 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of rlang 1.1.3 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of stringr 1.5.1 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of tibble 3.2.1 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of tidyselect 1.2.1 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of tzdb 0.4.0 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of utf8 1.2.4 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of vctrs 0.6.5 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of vroom 1.6.5 (x86_64-w64-mingw32) is the latest build
-#> ✔ Cached copy of withr 3.0.0 (i386+x86_64-w64-mingw32) is the latest build
-#> ✔ Installed photoplate 0.0.0.9000 (github::imperialnolini/photoplate@2e0ab67) (1.1s)
-#> ✔ Installed R6 2.5.1  (1.1s)
-#> ✔ Installed bit64 4.0.5  (1.1s)
-#> ✔ Installed bit 4.0.5  (1.1s)
-#> ✔ Installed cli 3.6.2  (1.1s)
-#> ✔ Installed clipr 0.8.0  (1.1s)
-#> ✔ Installed crayon 1.5.2  (1.1s)
-#> ✔ Installed dplyr 1.1.4  (1.1s)
-#> ✔ Installed fansi 1.0.6  (1.2s)
-#> ✔ Installed generics 0.1.3  (1.2s)
-#> ✔ Installed glue 1.7.0  (1.2s)
-#> ✔ Installed hms 1.1.3  (1.2s)
-#> ✔ Installed lifecycle 1.0.4  (1.2s)
-#> ✔ Installed magrittr 2.0.3  (1.3s)
-#> ✔ Installed pillar 1.9.0  (1.3s)
-#> ✔ Installed pkgconfig 2.0.3  (1.3s)
-#> ✔ Installed readr 2.1.5  (1.3s)
-#> ✔ Installed rlang 1.1.3  (1.4s)
-#> ✔ Installed stargazer 5.2.3  (1.5s)
-#> ✔ Installed stringi 1.8.3  (1.6s)
-#> ✔ Installed stringr 1.5.1  (487ms)
-#> ✔ Installed tidyselect 1.2.1  (514ms)
-#> ✔ Installed tibble 3.2.1  (628ms)
-#> ✔ Installed utf8 1.2.4  (467ms)
-#> ✔ Installed tzdb 0.4.0  (595ms)
-#> ✔ Installed vctrs 0.6.5  (483ms)
-#> ✔ Installed withr 3.0.0  (381ms)
-#> ✔ Installed vroom 1.6.5  (497ms)
-#> ✔ 1 pkg + 27 deps: upd 1, added 27 [9.7s]
 ```
 
 ## Example
@@ -202,7 +112,7 @@ photoplate(
   save_path,
   "model_output_label_for_crossref"
   )
-#> [1] "Saved .tex file to: C:\\Users\\imper\\AppData\\Local\\Temp\\RtmpsDBWG6\\photoplate_example364425186930.tex"
+#> [1] "Saved .tex file to: C:\\Users\\imper\\AppData\\Local\\Temp\\Rtmpys9OMG\\photoplate_example13c88274535c7.tex"
 
 # That code will make a .tex file with the stargazer::stargazer() output
 # of the model we estimated and with "!h" as the table format argument.
