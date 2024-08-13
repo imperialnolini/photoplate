@@ -109,7 +109,7 @@ photoplate(
 
 All done! Let's load the LaTeX file here in Markdown to see how it looks:
 ```{=latex}
-\input("example_output.tex")
+\input("auxiliaries/example_output.tex")
 ```
 
 
