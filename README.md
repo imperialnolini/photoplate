@@ -163,8 +163,6 @@ photoplate(
 All done! Let’s load the LaTeX file here in Markdown to see how it
 looks:
 
-(“auxiliaries/example_output.tex”)
-
 ## Notes about the function’s parameters
 
 - *this_stargazer*: Call of stargazer::stargazer() on regression model
