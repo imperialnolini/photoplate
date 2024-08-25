@@ -44,10 +44,13 @@
 #'                      title = "A table! With exclamation marks in the title!",
 #'                      dep.var.labels = "Dependent variable we generated for testing",
 #'                      add.lines = list(c("Was it fun to run this model?", "Yes")),
-#'                      notes = c("This is a note.",
+#'                      notes = c("This is a note ending in a period.",
 #'                                "Here's another note.",
 #'                                "Could also have written one long note instead.",
-#'                                "Just make sure each note has a period at the end."),
+#'                                "About to end a note with --, and-- right here:, and",
+#'                                "just so I can pick up that sentence on a new line.",
+#'                                "We see there isn't a new period after the --and-- from that line.",
+#'                                "Ending lines in other ways may add an extra period at the end."),
 #'                      table.layout = "m=!ldc#-!t-!a-!s=!n",
 #'                      type = "text")
 #'
@@ -83,10 +86,13 @@
 #'     title = "A table! With exclamation marks in the title!",
 #'     dep.var.labels = "Dependent variable we generated for testing",
 #'     add.lines = list(c("Was it fun to run this model?", "Yes")),
-#'     notes = c("This is a note.",
+#'     notes = c("This is a note ending in a period.",
 #'               "Here's another note.",
 #'               "Could also have written one long note instead.",
-#'               "Just make sure each note has a period at the end."),
+#'               "About to end a note with --, and-- right here:, and",
+#'               "just so I can pick up that sentence on a new line.",
+#'               "We see there isn't a new period after the --and-- from that line.",
+#'               "Ending lines in other ways may add an extra period at the end."),
 #'     table.layout = "m=!ldc#-!t-!a-!s=!n"),
 #'   position = "!h",
 #'   label = "model_output_label_for_crossref",
@@ -95,7 +101,10 @@
 #'  ## In general, the function seems to work best when you DON'T include
 #'  ## "stargazer_call =" in the function call, so best to leave that out and
 #'  ## simply enter the stargazer call as the first parameter without explicitly
-#'  ## identifying it.
+#'  ## identifying it. Also, you may get an extra period in your comment if you
+#'  ## end a line in something other than a period or --, and-- in the case of
+#'  ## splitting a compound sentence across separate elements in the notes()
+#'  ## parameter of stargazer::stargazer().
 #'
 #'  ## Running the function like this will return something like the following:
 #'  ## "Saved .tex file to: **temporary directory**\photoplate_example.tex"

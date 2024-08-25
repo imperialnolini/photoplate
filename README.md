@@ -100,42 +100,48 @@ stargazer::stargazer(model,
                      title = "A table! With exclamation marks in the title!",
                      dep.var.labels = "Dependent variable we generated for testing",
                      add.lines = list(c("Was it fun to run this model?", "Yes")),
-                     notes = c("This is a note.",
+                     notes = c("This is a note ending in a period.",
                                "Here's another note.",
                                "Could also have written one long note instead.",
-                               "Just make sure each note like this ends in a period."),
+                               "About to end a note with --, and-- right here:, and",
+                               "just so I can pick up that sentence on a new line.",
+                               "We see there isn't a new period after the --and-- from that line.",
+                               "Ending lines in other ways may add an extra period at the end."),
                      table.layout = "m=!ldc#-!t-!a-!s=!n",
                      type = "text")
 #> 
 #> A table! With exclamation marks in the title!
-#> ==================================================================================
-#>                                               Dependent variable:                 
-#>                               ----------------------------------------------------
-#>                                   Dependent variable we generated for testing     
-#> ----------------------------------------------------------------------------------
-#> x1                                                 -20.000***                     
-#>                                                     (0.000)                       
-#>                                                                                   
-#> x2                                                 30.000***                      
-#>                                                     (0.000)                       
-#>                                                                                   
-#> Constant                                           10.491***                      
-#>                                                     (0.008)                       
-#>                                                                                   
-#> ----------------------------------------------------------------------------------
-#> Was it fun to run this model?                         Yes                         
-#> ----------------------------------------------------------------------------------
-#> Observations                                         10,000                       
-#> R2                                                   1.000                        
-#> Adjusted R2                                          1.000                        
-#> Residual Std. Error                            0.289 (df = 9997)                  
-#> F Statistic                    646,745,117,735,764,099,082.000*** (df = 2; 9997)  
-#> ==================================================================================
-#> Note:                                                  *p<0.1; **p<0.05; ***p<0.01
-#>                                                                    This is a note.
-#>                                                               Here's another note.
-#>                                     Could also have written one long note instead.
-#>                               Just make sure each note like this ends in a period.
+#> ===============================================================================================
+#>                                                      Dependent variable:                       
+#>                               -----------------------------------------------------------------
+#>                                          Dependent variable we generated for testing           
+#> -----------------------------------------------------------------------------------------------
+#> x1                                                       -20.000***                            
+#>                                                            (0.000)                             
+#>                                                                                                
+#> x2                                                        30.000***                            
+#>                                                            (0.000)                             
+#>                                                                                                
+#> Constant                                                  10.491***                            
+#>                                                            (0.008)                             
+#>                                                                                                
+#> -----------------------------------------------------------------------------------------------
+#> Was it fun to run this model?                                Yes                               
+#> -----------------------------------------------------------------------------------------------
+#> Observations                                               10,000                              
+#> R2                                                          1.000                              
+#> Adjusted R2                                                 1.000                              
+#> Residual Std. Error                                   0.289 (df = 9997)                        
+#> F Statistic                           646,745,117,735,764,099,082.000*** (df = 2; 9997)        
+#> ===============================================================================================
+#> Note:                                                               *p<0.1; **p<0.05; ***p<0.01
+#>                                                              This is a note ending in a period.
+#>                                                                            Here's another note.
+#>                                                  Could also have written one long note instead.
+#>                                             About to end a note with --, and-- right here:, and
+#>                                              just so I can pick up that sentence on a new line.
+#>                               We see there isn't a new period after the --and-- from that line.
+#>                                  Ending lines in other ways may add an extra period at the end.
 ```
 
 Prior to using photoplate::photoplate(), it’s a good idea to check that
@@ -166,10 +172,13 @@ photoplate(
     title = "A table! With exclamation marks in the title!",
     dep.var.labels = "Dependent variable we generated for testing",
     add.lines = list(c("Was it fun to run this model?", "Yes")),
-    notes = c("This is a note.",
+    notes = c("This is a note ending in a period.",
               "Here's another note.",
               "Could also have written one long note instead.",
-              "Just make sure each note has a period at the end."),
+              "About to end a note with --, and-- right here:, and",
+              "just so I can pick up that sentence on a new line.",
+              "We see there isn't a new period after the --and-- from that line.",
+              "Ending lines in other ways may add an extra period at the end."),
     table.layout = "m=!ldc#-!t-!a-!s=!n"),
   position = "!h",
   label = "model_output_label_for_crossref",
