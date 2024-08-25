@@ -157,7 +157,11 @@ or “out” keyword parameters.
 In general, the photoplate::photoplate() function seems to work best
 when “stargazer_call =” is NOT included in its function call, so best to
 leave that out and simply enter the stargazer::stargazer() call as the
-first parameter without explicitly identifying it as such.
+first parameter without explicitly identifying it as such. Also, you may
+get an extra period in your comment if you end a line in something other
+than a period or –, and– in the case of splitting a compound sentence
+across separate elements in the notes() parameter of
+stargazer::stargazer().
 
 **Note any call to the function makes a .tex file with edits to the the
 regular stargazer::stargazer() LaTeX-formatted output, and the function
