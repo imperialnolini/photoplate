@@ -173,10 +173,11 @@ photoplate <- function(stargazer_call, #stargazer::stargazer() call on regressio
       stringr::str_replace("\\} *\\\\\\\\* *",
                            ".") %>%
 
-      # FOR TEXT COMMENTS MANUALLED ADDED IN STARGAZER:
+      # FOR TEXT COMMENTS MANUALLY ADDED IN STARGAZER:
       # Remove " & \\multicolumn{4}{r}{"
       stringr::str_replace(" *& *\\\\multicolumn\\{\\d+\\}\\{r\\}\\{",
                            "") %>%
+
       # Remove "} \\\\"
       stringr::str_replace("\\} *\\\\\\\\* *",
                            "")
@@ -188,6 +189,12 @@ photoplate <- function(stargazer_call, #stargazer::stargazer() call on regressio
     }
     comment <- comment %>% base::paste(this_row)
   }
+
+  # FOR ENDING INDIVIDUAL COMMENT LINES WITH ", and":
+  # Adding periods at line breaks may result in periods being added to comments,
+  # such as "xxxx , and. xxxx" if one comment line ends with ", and"; want
+  # to avoid having extra periods.
+  comment <- comment  %>% stringr::str_replace(", and. ", ", and ")
 
   # Save final file
   readr::write_lines(c(

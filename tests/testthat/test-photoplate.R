@@ -96,6 +96,43 @@
 #            fileext = ".tex",
 #            tmpdir = tempdir(check = TRUE))
 # )
+#
+# # TEST SEVEN: model AND model_two, two notes with ", and" in first and period
+# # in second, title, DV label, new line, col labels, new line
+# stargazer::stargazer(model, model_two,
+#
+#                      notes = c("Note, and",
+#                                "note2."),
+#
+#                      title = "Another table, this time with a test title",
+#                      dep.var.labels = "Test DV",
+#
+#                      add.lines = list(c("For fun?", "Yes", "Yes")),
+#
+#                      column.labels   = c("1984", "1988"),
+#                      column.separate = c(1,1),
+#                      table.layout = "m=!ldc#-!t-!a-!s=!n",
+#                      type = "text")
+# photoplate(
+#   stargazer::stargazer(model, model_two,
+#
+#                        notes = c("Note, and",
+#                                  "note2."),
+#
+#                        title = "Another table, this time with a test title",
+#                        dep.var.labels = "Test DV",
+#
+#                        add.lines = list(c("For fun?", "Yes", "Yes")),
+#
+#                        column.labels   = c("1984", "1988"),
+#                        column.separate = c(1,1),
+#                        table.layout = "m=!ldc#-!t-!a-!s=!n"),
+#   "!h",
+#   "model_output_label_for_crossref",
+#   tempfile(pattern = "photoplate_example",
+#            fileext = ".tex",
+#            tmpdir = tempdir(check = TRUE))
+# )
 
 
 
