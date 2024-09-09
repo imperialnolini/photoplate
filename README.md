@@ -161,7 +161,12 @@ first parameter without explicitly identifying it as such. Also, you may
 get an extra period in your comment if you end a line in something other
 than a period or –, and– in the case of splitting a compound sentence
 across separate elements in the notes() parameter of
-stargazer::stargazer().
+stargazer::stargazer(). Also note the usual comment of the keys for
+stars re: p-value significance levels will be at the end of the comment.
+Future versions of this package may make an option to suppress that line
+in case you don’t want to include the default p-values and their
+corresponding significance stars in your output (e.g., if you’d prefer
+to include standard errors with no stars instead).
 
 **Note any call to the function makes a .tex file with edits to the the
 regular stargazer::stargazer() LaTeX-formatted output, and the function

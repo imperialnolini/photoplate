@@ -104,7 +104,12 @@
 #'  ## identifying it. Also, you may get an extra period in your comment if you
 #'  ## end a line in something other than a period or --, and-- in the case of
 #'  ## splitting a compound sentence across separate elements in the notes()
-#'  ## parameter of stargazer::stargazer().
+#'  ## parameter of stargazer::stargazer().  Also note the usual comment of the
+#'  ## keys for stars re: p-value significance levels will be at the end of the
+#'  ## comment. Future versions of this package may make an option to suppress
+#'  ## that line in case you don't want to include p-values and their
+#'  ## corresponding significance stars in your output (e.g., if you'd prefer
+#'  ## to include standard errors with no stars instead).
 #'
 #'  ## Running the function like this will return something like the following:
 #'  ## "Saved .tex file to: **temporary directory**\photoplate_example.tex"
@@ -166,7 +171,17 @@ photoplate <- function(stargazer_call, #stargazer::stargazer() call on regressio
     as.integer()
 
   # Rows with comment
-  comment_rows <- (precomment_row + 1) : (postcomment_row - 1)
+  # Note: row at (precomment_row + 1) is key for p-value stars. Want that at the
+  # end of the table's comment, so looking at comment rows in these two pieces.
+  # Later, may want to add new parameter for if don't want p-values so look from
+  # (precomment_row + 1) to (postcomment_row - 1) without moving first row to end
+  # (but will have to test and see how to turn off stargazer stars and p-value
+  # stars key in comment). If make that change, update "Future versions of this
+  # package may make an option to suppress ..." bit in README and documentation.
+  comment_rows <- c(
+    (precomment_row + 2) : (postcomment_row - 1),
+    (precomment_row + 1)
+    )
 
   # Pull comment
   comment = c("\\textit{Note:}")

@@ -116,7 +116,12 @@ photoplate(
  ## identifying it. Also, you may get an extra period in your comment if you
  ## end a line in something other than a period or --, and-- in the case of
  ## splitting a compound sentence across separate elements in the notes()
- ## parameter of stargazer::stargazer().
+ ## parameter of stargazer::stargazer().  Also note the usual comment of the
+ ## keys for stars re: p-value significance levels will be at the end of the
+ ## comment. Future versions of this package may make an option to suppress
+ ## that line in case you don't want to include p-values and their
+ ## corresponding significance stars in your output (e.g., if you'd prefer
+ ## to include standard errors with no stars instead).
 
  ## Running the function like this will return something like the following:
  ## "Saved .tex file to: **temporary directory**\photoplate_example.tex"
