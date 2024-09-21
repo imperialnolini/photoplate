@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of the R photoplate package is to customize stargazer::stargazer() regression tables for inclusion in LaTeX documents. The example below illustrates the functionality of the package.
+The goal of the photoplate package is to customize stargazer::stargazer() regression table outputs (in R) for inclusion in LaTeX documents; you can specify tables' position arguments and internal labels for cross-referencing.
 
 Until the later 1980s, astronomers used glass photographic plates to record their observations. These plates made it possible for them to share what they saw when gazing toward the stars; in that spirit, this package's eponymous function is named "photoplate."
 
