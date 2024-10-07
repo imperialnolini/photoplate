@@ -78,7 +78,7 @@ We’ll generate 10000 datapoints for our analysis. Let’s sample with
 replacement from 0 to 10000000 for x1 and x2, our two explanatory
 variables, and from 0.0001 to 1 without replacement for e, our error.
 Then, we’ll couple those three variables with the betas identified above
-to calculate our y, dependent variable. The data generation:
+to calculate y, our dependent variable. The data generation:
 
 ``` r
 base::set.seed(1)
@@ -210,7 +210,8 @@ the PDF of it):
   output(s). DO NOT enter arguments for the keyword parameters “type”
   and “out” (though technically it’s ok to have values for them which
   would yield a latex output, but it’s probably easier to leave them out
-  entirely).
+  entirely). Also best not to identify this with the stargazer_call
+  argument; just include the call itself.
 
 - *position*: String. Position parameter for the table in LaTeX - e.g.,
   “h”, “t”, “b”, “p”, “!”, “H”; for more information, please see LaTeX’s
@@ -238,6 +239,11 @@ specify anything for the “type” or “out” parameters, though you can use
 the other parameters to change the default output of the function. It is
 worth verifying the output looks good by generating a textual output
 before running photoplate().
+
+In the future, I plan to update the package for cases when users might
+want to suppress the default stargazer::stargazer() stars for
+significance levels. For now, though, the package assumes your model
+output will have them.
 
 Finally, if you encounter any issues using the package, please feel free
 to email me at <nolan.s.siegel@gmail.com>; I’ll look forward to
