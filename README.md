@@ -6,6 +6,7 @@
 # photoplate
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 The goal of the photoplate package is to customize
@@ -22,6 +23,7 @@ package’s eponymous function is named “photoplate.”
 
 <img src="auxiliaries/photographic_plate.jpeg" alt="A collection of glass plates from 1909 to 1922 capture the moon in different phases. Niels Bohr Institute, University of Copenhagen." width="75%" />
 <p class="caption">
+
 A collection of glass plates from 1909 to 1922 capture the moon in
 different phases. Niels Bohr Institute, University of Copenhagen.
 </p>
@@ -38,7 +40,7 @@ GitHub by running the following:
 
 ``` r
 # install.packages("pak")
-pak::pak("imperialnolini/photoplate")
+pak::pak("nolansiegel/photoplate")
 ```
 
 If that doesn’t work, there’s one more option we can try. Note you may
@@ -50,7 +52,7 @@ it:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("imperialnolini/photoplate")
+devtools::install_github("nolansiegel/photoplate")
 ```
 
 ## Example
